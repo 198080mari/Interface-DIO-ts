@@ -10,8 +10,6 @@ export const Container = styled.main`
     justify-content: space-between;
     `
 export const Title = styled.h3`
-    font-family: Open Sans;
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     margin-bottom: 24px;
@@ -19,8 +17,6 @@ export const Title = styled.h3`
     color: #ffffff;
     `
 export const TitleHighlight = styled.h3`
-    font-family: Open Sans;
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     margin-bottom: 24px;

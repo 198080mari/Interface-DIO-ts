@@ -5,7 +5,6 @@ export const Container = styled.div`
     flex-direction: row;
     margin-bottom: 24px;
 ` 
-
 export const UserPicture = styled.img`
     width: 32px;
     height: 32px;
@@ -13,10 +12,7 @@ export const UserPicture = styled.img`
     border: 3px solid #FFFFFF;
     margin-right: 12px;
 `
-
 export const NameText = styled.div`
-    font-family: 'Open Sans';
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;

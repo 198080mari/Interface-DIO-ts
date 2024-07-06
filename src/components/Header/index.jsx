@@ -13,9 +13,7 @@ const Header = ({autenticado}) => {
             <img src={logo} alt="Logo da dio"/>
             {autenticado ? (
               <>
-               <BuscarInputContainer>
-                <Input placeholder='Buscar...'/>
-               </BuscarInputContainer>
+               <BuscarInputContainer><Input placeholder='Buscar...'/></BuscarInputContainer>
                 <Menu>Live Code</Menu>
                 <Menu>Global</Menu>
               </>
@@ -23,7 +21,7 @@ const Header = ({autenticado}) => {
           </Row>
           <Row>
               {autenticado ? (
-                <UserPicture src="https://avatars.githubusercontent.com/u/45184516?v=4"/>
+                <UserPicture src="https://avatars.githubusercontent.com/u/161047430?s=400&u=1f460fd28f31c8125d8de963f06440996de02b08&v=4"/>
               ) : (
               <>
                 <MenuRight href="/">Home</MenuRight>
