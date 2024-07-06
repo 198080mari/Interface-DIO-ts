@@ -7,7 +7,8 @@ import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup";
 import { api } from '../../services/api';
-import { Column, Container, CriarText, EsqueciText, Row, SubtitleLogin, Title, TitleLogin, Wrapper } from './styles';
+import { ButtonCriar } from '../../components/ButtonCriar';
+import { Column, Container, EsqueciText, Row, SubtitleLogin, Title, TitleLogin, Wrapper } from './styles';
 
 const baseUrl = 'http://localhost:3000';
 
@@ -35,6 +36,11 @@ const Login = () => {
             alert('Ocorreu um erro, tente novamente.')
         }
       };
+
+        const handleClickCriarConta = () => {
+            navigate('/cadastro')
+        }
+
     return ( <>  
     <Header />
     <Container>
@@ -53,7 +59,7 @@ const Login = () => {
                 </form>
                 <Row>
                     <EsqueciText>Esqueci minha senha</EsqueciText>
-                    <CriarText>Criar Conta</CriarText>
+                    <ButtonCriar title='Criar Conta' variant='secondary' onClick={handleClickCriarConta}>Criar Conta</ButtonCriar>
                 </Row>
             </Wrapper>
         </Column>

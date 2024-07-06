@@ -1,6 +1,6 @@
 {
     "users": [
-      { "id": "1", "name": "Mari", "email": "marianacruznaweb@gmail.com", "senha": 123456 },
-      { "id": "2", "title": "Diego", "email": "diegoqueres81@gmail.com", "senha": 123456 }
+      { "id": "1", "name": "Mariana Cruz", "email": "marianacruznaweb@gmail.com", "senha": 123456 },
+      { "id": "2", "title": "Diego Silverio", "email": "diegoqueres81@gmail.com", "senha": 123456 }
     ]
 }
