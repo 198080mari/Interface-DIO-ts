@@ -9,6 +9,7 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup";
 import { api } from '../../services/api';
 import { Column, Container, SubtitleLogin, Title, TitleLogin, Wrapper, TermosText, Row, ContaText, LoginText } from './styles';
+import { IFormData } from '../cadastro/types';
 
 const baseUrl = 'http://localhost:3000';
 
@@ -25,7 +26,7 @@ const schema = yup.object({
         resolver:yupResolver(schema),
         mode: 'onChange',  //valida assim que usuario digitar
     });
-      const onSubmit = async formData => { //sync e await para esperar resposta pq a api pode demorar
+      const onSubmit = async (formData: IFormData) => { //sync e await para esperar resposta pq a api pode demorar
         try {
             const { data } = await api.get(`${baseUrl}/users?name=${formData.name}&email=${formData.email}&senha=${formData.password}`);
             if(data.length === 1) {

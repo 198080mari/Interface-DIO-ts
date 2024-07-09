@@ -1,11 +1,12 @@
 import React from 'react';
 import { ButtonContainer } from './styles';
+import {IButtonCriar} from './types';
 
-const Button = ({title, variant='primary', onClick}) => {
+const ButtonCriar = ({title, variant='primary', onClick}: IButtonCriar) => {
   return (
     <ButtonContainer variant={variant} onClick={onClick}>
         {title}
     </ButtonContainer>
   )
 }
-export { Button }
+export { ButtonCriar }

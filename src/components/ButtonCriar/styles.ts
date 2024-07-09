@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
+import { IButtonCriarStyled } from './types';
 
-export const ButtonContainer = styled.button`
+export const ButtonContainer = styled.button<IButtonCriarStyled>`
     font-weight: 700px;
     font-size: 14px;
     line-height: 19px;

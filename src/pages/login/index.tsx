@@ -9,6 +9,7 @@ import * as yup from "yup";
 import { api } from '../../services/api';
 import { ButtonCriar } from '../../components/ButtonCriar';
 import { Column, Container, EsqueciText, Row, SubtitleLogin, Title, TitleLogin, Wrapper } from './styles';
+import { IFormData } from './types';
 
 const baseUrl = 'http://localhost:3000';
 
@@ -20,11 +21,11 @@ const schema = yup.object({
 const Login = () => {
     const navigate = useNavigate();
 
-    const { control, handleSubmit, formState: { errors } } = useForm({
+    const { control, handleSubmit, formState: { errors } } = useForm<IFormData>({
         resolver:yupResolver(schema),
         mode: 'onChange',  //valida assim que usuario digitar
     });
-      const onSubmit = async formData => { //sync e await para esperar resposta pq a api pode demorar
+      const onSubmit = async (formData: IFormData) => { //sync e await para esperar resposta pq a api pode demorar
         try {
             const { data } = await api.get(`${baseUrl}/users?email=${formData.email}&senha=${formData.password}`);
             if(data.length === 1) {
